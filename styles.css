@@ -1,0 +1,78 @@
+html, body{
+    margin: 0;
+    padding: 0;
+
+}
+
+#header {
+    background: url("images/keyboard.jpg");
+    height: 25vw;
+    width: 100%;
+}
+
+#nav {
+    width: 60%;
+    position: absolute;
+    top: 15px;
+    left:20%;
+
+}
+
+#header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#header li {
+    display: inline-block;
+    float: left;
+}
+
+#header a:link, #header a:visited {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+
+#header a:hover, a:active {
+    /*background-color: #636363;*/
+    color: rgba(1,54,92,1);
+}
+
+/*Fonts and Sizes */
+#header a.pages:link, #header a.pages:visited {
+    width: 120px;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#header a.home:link, #header a.home:visited {
+    width: 120px;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 4px 200px 4px 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+
+/***************************************************************/
+/*-----------------------PAGE CONTENT--------------------------*/
+/***************************************************************/
+
+.content {
+    height: auto;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.content h1 {
+    
+}
+
