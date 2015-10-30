@@ -1,47 +1,74 @@
 body {
-	background: linear-gradient(rgba(1,54,92,0.8), rgba(1,54,92,0.8)),
-				url("images/mac.jpg");
-	background-size: cover;
 
+	position: absolute;
+	width: 100%;
+	height:100%;
 	margin: 0;
 	padding: 0;
-	max-height: 100%;
+/*	max-height: 100%;*/
+	/*overflow: none;*/
+	min-width: 1600px;
+	min-height: 900px;
+}
+
+#bg {
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(rgba(1,54,92,0.3), rgba(1,54,92,0.3)),
+			url("images/home/water.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #title {
-	position: absolute;
-	top: 25%;
-	left: 0; right:0;
-	height: auto; 
-	margin-left: auto; margin-right: auto;
-	text-align: center;
-
-
+	position: relative;
+	top: 60px;
+	left: 12%; right:0;
+	height: auto;
+	width: 700px;
 }
 	
 	#title h1 {
-		font: 70px Georgia, Serif; 
+		font: 90px 'Rock Salt', cursive; 
 		color: white;
 		letter-spacing: 2px;
-		text-shadow: 0px 3px 3px #494949;
+		text-shadow: 1px 0px 1px #C0210F;
+		/*text-shadow: 0px 3px 3px #494949;*/
 	}
 
 	#title h2 {
-		
-		font: 42px Georgia, Serif;
-		color: #F04F3C;
+		font-family: 'Indie Flower', cursive;
+		font-size: 55px;
+		text-decoration: none;
+    	text-transform: uppercase;
+    	font-weight: bold;
+
+		color: white;
 		letter-spacing: 2px;
-		text-shadow: 0px 3px 3px #494949;
+		text-shadow: 1px 0px 1px #C0210F;
+		margin-top: -60px;
+		padding-left: 350px;
+
+
+
 
 	}
 
 /*---------------------LINKS----------------------*/
 
 .links {
-	margin: 1em auto;
-	text-align: center;
-	position: absolute;
-	bottom: 10%; left: 0; right: 0;
+	/*margin: 1em auto;*/
+	margin:0; padding: 0;
+	margin-top: 8%;
+	margin-left: 40%;
+	width:950px;
+	/*text-align: center;*/
+	/*position: relative;*/
+	bottom: 10%; 
 
 }
 
@@ -49,25 +76,30 @@ body {
 	border: 0;
 	display: inline-block;
 	margin: 1em;
-	width: 289px;
+	width: 200px;
+
 
 }
 
 .links img {
 	display: block;
-	height: auto;
-	max-width: 100%;
+	height: 170px;
+	width: 170px;
+	
+	/*max-width: 100%;*/
 }
 
 .links figure {
-	height: 163px;
+	height: 140px;
 	overflow: hidden;
 	position: relative;
-	width: 289px;
+	width: 140px;
+	border-radius: 100%;
 }
 
 .links figcaption {
-	background: rgba(1,54,92,0.9);
+	/*background: rgba(192, 33, 15,0.9);*/
+	text-align: center;
 	color: white;
 	display: table;
 	height: 100%;
@@ -77,15 +109,6 @@ body {
 	right: 0;
 	top: 0;
 	z-index: 100;
-}
-
-.links figcaption p {
-	display: table-cell;
-	font-size: 1.5em;
-	position: relative;
-	top: -40px;
-	width: 289px;
-	vertical-align: middle;
 }
 
 .links li:hover figcaption {
@@ -129,7 +152,7 @@ body {
 
 /*Fade in caption*/
 .links figcaption {
-	background: rgba(1,54,92,0.8);
+	background: rgba(1,54,92,0.6);
 	color: white;
 	display: table;
 	height: 100%;
@@ -146,3 +169,4 @@ body {
 	transition-delay: 100ms;
 	z-index: 100;
 }
+

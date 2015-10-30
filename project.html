@@ -2,17 +2,291 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Project</title>
+		<title>Ryan|Project</title>
 
 		<link href="styles.css" rel="stylesheet" type="text/css" />
+		<!-- Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Ubuntu:500,500italic,700,700italic,400,400italic,300italic,300|Roboto+Mono:100italic,300,300italic,400,400italic,500,500italic,700,700italic|Roboto:900italic,700italic,100,300italic,300,400,400italic,500,500italic,700,900,100italic|Indie+Flower|Rock+Salt|Open+Sans+Condensed:300|Crimson+Text:400,600italic,400italic,700,700italic,600' rel='stylesheet' type='text/css'>
+
+		<link href = "fonts/css/fontello.css" rel="stylesheet">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 	</head>
 	<body>
 
-	<div id="header"></div>
+	<div id="header">
+		<ul id="nav">
+			<l><a href="index.html" class = "home">Ryan Eyles</a></l> 
 
-	Project
+			<div id="links">
+				
 
-	<script src="js/shared.js"></script>
+			
+			<l class = "project" id="selected"><a href="project.html" class="pages">Project</a>
+				<div id="dropDown">
+				<ul>
+					<li><a href="project.html">Design Proposal</a></li>
+					<li><a href="project.html#partB">Progess Demonstration</a></li>
+					<li><a href="project.html#partC">Final Delivery</a></li>
+				</ul>
+				</div>
+
+			</l>
+
+			<l><a href="portfolio.html" class="pages">Portfolio</a></l>
+			<l><a href="reflection.html" class="pages">Reflection</a></l>
+			<l><a href="about.html" class="pages">About</a></l>
+
+			</div>
+		</ul>
+
+	</div>
+	
+	<br>
+
+	<div class="content">
+	<p>For the duration of semester 2, 2015, in teams, we were tasked to develop a web-based application that presented Trove hosted data in an engaging and interactive manner. </p>
+
+	<p><a href="http://trove.nla.gov.au/">Trove </a>is a web-based portal maintained by the National Library of Australia which hosts and links vast and varying Australian related content. The content is obtained by its own digital archives as well as those from libraries, museums research institutions and other Australian organisations. Books, newspaper articles, photographs, audio and maps are just a few types of data retrievable through Trove. </p>
+
+	<p>Therefore the project required the acquisition of specific data through Trove and to display this in a web-application, unlike the existing search paradigm. A successful solution required three key stages and consequently three key deliverables; the <a href="#"> Design Proposal</a>, <a href="#partB">Progress Demonstration</a>  and the <a href="#partC">Final Delivery</a>.</p>
+
+		<div id="partA">
+			<h1>Design Proposal</h1>
+			<h2>Breif</h2>	
+				<p>The first milestone due in week 5 was a design proposal. This task was aimed to research and ideate a project which would effectively meet all project requirements. We were asked to explore trove and the various data available, to explore exisitng web applications and finally devise our own web-based application to develop over the course of the semester. As assessment for this milestone we delivered a pitch and produced a <a href="attachments/Proposal.pdf">proposal report</a> .</p>
+
+			<h2>Ideation</h2>
+
+			<img id = "ideaIMG" src="images/concept/ideas.png">
+				<p>
+					Before deciding upon a topic we each had to individually produce various project ideas, some web-based application that could display troves data in a meaningful way. In the following contact session we split the room into five sections, Games, Puzzles, Utilities, Educational and Other topics and proceeded to brainstorm with other students and conclude on a project topic and consequently a team. </p>
+				<p>Three of us decided on an Educational Game, the 'Australian Tour' as we called it and used de bono's <a href="http://www.debonothinkingsystems.com/tools/6hats.htm">Six Thinking Hats</a> technique to reaffirm our decision. 
+				</p>
+
+			<h2>Concept</h2>
+
+			<p>The 'Australian Tour' Game that we decided to pursue was inspired by the infamous <a href="http://www.pokemon.com/au/">pokemon</a> game, in particular the pokemon map. The Australian Tour Game alike pokemon would require a player to move from city to city and complete smaller tasks before they could progress. </p>
+
+			<p>These smaller tasks or 'mini-games' were proposed to be various challenges relating to Australian trivia and information from the trove application. Furthermore each challenge would be local to the city or node the player had currently reached. </p>
+
+			<p>To allow the perfect contrast between game, and education we decided to aim our web-application towards Junior School Students from years 3 to 7 (ages 8 to 12). The game therefore would be simplistic and interactive; and the mini games, i.e. the trove data would be visual and varying. </p>
+
+			<h2>Design</h2>
+			<div class = "slider" id = "conceptImgs">
+
+				<figure >
+					<img  class = "currImg" alt = "Concept Images" src = "images/concept/login.jpg"/>
+
+
+					<figcaption><span>
+						<i  onclick="slider.prev(concept)" id="arrowLeft"class="arrow-icon icon-left-circle"></i>
+
+						<i onclick="slider.next(concept)" id="arrowRight" class="arrow-icon icon-right-circle"></i>
+
+					</span>
+					<p id = "conceptSliderCap" class = "imgCaption">&nbsp Login Page</p></figcaption>
+				</figure>
+				<figure >
+					<img  class = "nxtImg" alt = "Concept Images" src = "images/concept/ingame.jpg"/>
+				</figure>
+				
+			</div>
+			<p>To suit our audience the entire web-application was to be simple; the application would begin on a login screen, follow to the game and upon completion display a leader board. </p>
+
+			<p>The login screen concept was basically to act as a home screen as well as allow users to login and keep track of their high scores, the main application would appear on the following page, the game page. This is where the user interacts with key strokes and mouse movements to move a player around Australia stopping at various location based nodes. Here they would complete a Trove powered mini-game to unlock that node and increase their total score. The game completes once all nodes are unlocked and the final screen, the leader board screen would display. As with many games we decided to introduce a reward system to increase the competitive nature of the game and consequently engagement of users. The leader board shown at the conclusion will allow users to compare their results with the best and target for a better score.</p>
+
+			<p>The project could be broken into three major sections, the game functionality, the back end Trove and php data acquisition for instance retrieving data for the mini-games and retrieving user data for the leader board and finally the styling and graphics of each page and overlays.</p>
+
+			<p>I was assigned the game functionality.</p>
+
+			<h2>Reflection</h2>
+			<p>This milestone project was completed as a team, much of which was completed during the contact and workshop hours. From the start we had a strong idea of how our application would've designed however we did need to tweak and refine some details in particular how the trove data would be used within the mini-games. </p>
+
+			<p>In addition to the previously mentioned <a href="#partA">Proposal</a> report for this milestone we also had to present a poster and a pitch. </p>
+
+			<p>Our pitch went well, because we had spent hours discussing and refining our idea we all had a very clear understanding of our concept and were able to portray that through the pitch. Good feedback we received from the pitch was in regard tot eh trove data, in particular that if some of the mini-games were trivia or multiple choice questions, how we would go about using trove to find questions and answers, this is something we took great consideration in the next milestone.</p>
+
+			<p>I was very happy with the concept we produced however the one thing that we could have improved on for this milestone was the poster. We spent a lot of time on solidifying our concept, not much time was spent on the poster. The poster was simply a few of our concept images and too much text. I think we could have used less text and more / bigger images would have produced a clearer poster. But this is petty overall as a team we completed this milestone well. </p>
+
+
+
+		</div>
+		</div>
+		<br><br><br>
+
+
+		<div id="partB">
+			<div class="seperator"> 
+				<img src="images/keyboard.jpg">
+			</div>
+
+		<div class = "content">
+			<h1>Progress Demonstration</h1>	
+			<h2>Brief</h2>
+			<p>The second of three milestones was a progress demonstration which as the name states was aimed to show considerable progress towards project completion. During this milestone as a team we had to consider key challenges and progress to overcome these, as well as define and prioritise tasks and approaches needed to complete the project.</p>
+
+			<p>At various stages we also received feedback which has helped shape and change our original concept for the better.</p>
+
+			<p>As assessment for this milestone we produced a Demonstration and progress report, which explains in depth the tasks completed and the plan forward. </p>
+
+			
+			<h2>Concept Changes</h2>
+			<p>After feedback received from our proposal pitch and from a paper prototyping session we decided to make a few adjustments to our original concept. The largest change seemed to common theme from feedback participants and that was a question of how our trove data would interact with the mini-games. It seemed it may be difficult to both find questions and answers from trove, therefore we decided to change that section of our application. We change this to have a mini-game which would be stored on a php data base and following the mini game we would retrieve trove data and display information about that node location. We also decided that we could have hints for the mini-games which would similarly display related data from trove.</p>
+
+			<p>Additionally we decided to change some small formatting and styling aspects and introduced bonus scoring which rewards multiple successful mini-games in a row. </p>
+
+
+			<h2>Individual Contirbution</h2>
+			<p>As mentioned in the previous milestone I was delegated the task of game functionality and had made considerable progress throughout this stage of the project.</p>
+
+			<p>Initially I started by introducing the game map of Australia, a player sprite which appears to walk by the arrow keys and nodes which change colour depending if they are locked or unlocked.</p>
+			<figure id = "spriteIMG">
+				<img src="images/progress/sprite.png">
+				<figcaption>Sprite Example</figcaption>
+
+			</figure>
+
+			<p>The mini-game overlay was then implemented to open on the player reaches a node and an example quiz is currently occupying this popup. Upon completion the trove information overlay appears however has not yet been filled. </p>
+
+			<p>Additional functionality was also introduced such as a score and incremental timer, sound and a menu to pause/resume, quit or restart the game or to open the game instructions. Hotkeys were also implemented for these menu items. </p>
+
+			<p>Finally some settings were designed and implemented. Before starting the game a settings screen is displayed which allows the user to choose a player avatar, the game difficulty and whether or not to have sound. </p>
+
+			<p>The game difficulty currently is quite simple, which just limits the amount of time a user has to complete the game. However this will be improved before final delivery</p>
+
+			<figure id="progressIMG">
+				<img src = "images/progress/ingame.png">
+				<!-- <figcaption>Game Progress</figcaption> -->
+			</figure>
+
+			
+
+			<h2>Yet to be Completed</h2>
+			<p>The most important tasks still to be completed were previously delegated to the other two team members. Basically the mini-games and trove information overlays needed to be filled from the back end data acquisition and everything needed to be styled. </p>
+
+			<p>As for my individual contribution left, I was required to fix some of the current bugs, improve the difficulty and there after would be additional functionality we did not consider in the concept. Functionality such as fixing the player within the land segment of the map and saving the game. However instead of first tackling these additional and maybe unnecessary functions I would help my team mates reach their required goals. </p>
+
+			
+			<h2>Reflection</h2>
+			<p>By the due date of this assessment we had made considerable progress towards a completed web-application. Our demonstration went well and we were able to show we met all the requires specifications through the report and demonstration. </p>
+
+			<p>Individually at this stage I had almost completed my required tasks, the game functionality was close to delivery however other sections were still to be completed. </p>
+
+			<p>As I mentioned, we were pleased with the result of this milestone however as an improvement we should have been a little more prepared for the demonstration. Due to the rushed day we did not have much time to set up and unfortunately I loaded the web page in a browser in which our application was buggy. This meant during the demonstration I had to waste time getting the application open in another browser. Possibly could have been better if we used our own laptop and just plugged that into the system rather than having to load everything on the given computer in a rushed amount of time. </p>
+
+			<p>Otherwise this milestone was completed successful and not much more was required for final delivery. </p>
+
+
+		</div>
+		</div>
+
+		<br><br><br>
+
+		<div id="partC">
+
+		<div class="seperator"> 
+			<img src="images/train.jpg">
+		</div>
+
+		<div class = "content">
+			<h1>Final Delivery</h1>	
+			<h2>Brief</h2>
+			<p>The last milestone was the project delivery where we progressed from <a href = "#partB">part B</a> to produce a finished and deliverable web-application. Similarly to the second milestone, we continually critiqued and received feedback on the application and in turn made changes. </p>
+
+			<p>We delivered our web-application, <a href="http://deco1800-g5.uqcloud.net/">The Australian Race</a>  during a trade show session, where all teams show cased their applications. Furthermore a <a href = "attachments/FinalReport.pdf">final report</a> was produced to explain the application in depth, describing the development and discussing the effectiveness of our solution.</p>
+
+			<h2>Design Changes</h2>
+			<p>
+				Throughout this milestone due to internal critique or feed back from peers and tutors various design changes were made and implemented. Besides minor changes to styling and some functionality; the major changes that occurred were in regard to the mini games and trove information.
+			</p>
+
+			<p>
+				Originally after a user failed or passed a mini-game at any given node it was designed such that a information screen would appear, displaying trove article data specific to the current node location. This however seemed to slow down game play and provided a great amount of text, too great for our target audience, especially if the node was failed multiple times. Therefore it was decided to remove the information display after each mini-game.
+			</p>
+
+			<div id = "nodeIMG">
+
+			<div id = "unlck"><p>Unlocked Node</p></div>
+			<div id = "lck"> <p>Locked Node </p> </div>
+			<div id = "inf"> <p>Information Node</p></div>	
+			</div>
+
+			<p>Instead information nodes were introduced which when the user arrived at these nodes trivia from trove articles would be displayed. Additionally nodes which had become unlocked (by completing the mini-game) acted like an information node. The idea meant the user could see trivia at their own discretion. Meaning they were able to pick and choose which nodes they would like additional data for, especially if they struggled on a nodes particular mini-game.</p>
+
+
+
+			<p>Previously the main source of trove data was to be text heavy, hence the previously mentioned change. However, trove data would now only be shown at the users discretion which may be never. Therefore it was also decided to include trove images within the mini-games that required images. That way trove was more predominate throughout the web-application.</p>
+
+
+			<h2>Individual Contribution</h2>
+			
+
+			<p>Again my individual contribution to the project for this milestone was vast. As mentioned in <a href="#partB">Part B</a>  the game functionality had a few minor bugs, such as the time and score remaining the same after a game restart. Small bugs similar to this were fixed first.</p>
+
+			<div class = "slider" id = "finalImgs">
+
+				<figure >
+					<img  class = "currImg" alt = "Final Delivery Images" src = "images/final/login.png"/>
+
+
+					<figcaption><span>
+						<i  onclick="slider.prev(finalPjt)" id="arrowLeft"class="arrow-icon icon-left-circle"></i>
+
+						<i onclick="slider.next(finalPjt)" id="arrowRight" class="arrow-icon icon-right-circle"></i>
+
+					</span>
+					<p id = "finalSliderCap" class = "imgCaption">&nbsp Login Page</p></figcaption>
+				</figure>
+				<figure >
+					<img  class = "nxtImg" alt = "Final Delivery Images" src = "images/final/ingame.png"/>
+				</figure>
+				
+			</div>
+
+
+			<p>Additionally the functionality of the game difficulty was improved. Instead of just controlling the game time the difficulty was also implemented to allow easier difficulties more chances at each mini-game. Easy receives 3 attempts at each mini-game before it is considered incorrect, Medium receives 2 and Hard only gets one attempt. Note however each failed attempt is penalised by a score. </p>
+
+			<p>Finally I  introduced custom alert and confirm boxes instead of using browser specific alerts and I introduced a leader board page to load at game completion. </p>
+
+			<p>This was the conclusion to game and website functionality and all was left was styling, mini-games and trove data. Liam completed the styling but unfortunately our third team member dropped the course late during this milestone, leaving me to complete the mini-games and Trove data.</p>
+
+			<p>As mentioned previously, trove articles were to be displayed in information nodes and unlocked nodes, by introducing an array of keywords, each time the user arrives at one of these nodes a random key word is chosen and trove searched and displayed.</p>
+
+			<p>Furthermore due to time constraints and only having 2 team members instead of having multiple types of mini-games only trivia games were used. This way each trivia question (selected at random  for each node) had an attached keyword. Trove was then searched and a random image was used within the question.</p>
+
+
+
+
+			<h2>Reflection</h2>
+			<p>Overall the final web-application met all specifications and expectations portrayed in the project concept (<a href = "#partA">Part A</a>). The application successfully provided a educational game for young students to learn about Australia, and displays trove data in a meaningful and interactive manner.</p>
+
+			<p>The trade show was completed successfully, everyone gave positive feedback and genuinely liked the final product. </p>
+
+			<p>Although all requirements were met and we've produced a successful web-application there are a variety of improvements. Unfortunately most of these were tasks assigned however changed after loosing our third team member. </p>
+
+			<p>Firstly the leader board and login page were not connected to php and therefore do not update or retain data after closing the web page.</p>
+
+			<p>The trove data could have been more specific, it would be nice to refine the articles in particular to display data specific to the mini-games, therefore if the user was struggling on a question they could go to an information or unlocked node and retrieve specific information required to complete the current mini game rather than random Australian trivia. </p>
+
+			<p>Finally mini-games became trivia questions, for the purpose of enjoyment and engagement it would be preferable to have various game types.</p>
+
+			<p>Otherwise the project was completed effectively.</p>
+
+			<p>For access to the project code please refer to <a href="https://github.com/123ryan321/deco1800">GitHub</a></p>
+			</div>
+
+
+		</div>
+	</div>
+
+
+	<!-- Back to top -->
+	<a href="#" id="toTop"><i class="arrow-icon icon-up-circled"></i><hr/>Back To Top</a>
+
+		
+	<script src="js/shared.js" ></script>
+
 	</body>
 </html>

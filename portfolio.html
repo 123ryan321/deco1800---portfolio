@@ -2,17 +2,111 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Portfolio</title>
+		<title>Ryan|Portfolio</title>
 
 		<link href="styles.css" rel="stylesheet" type="text/css" />
+		<!-- Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Roboto:900italic,700italic,100,300italic,300,400,400italic,500,500italic,700,900,100italic|Indie+Flower|Rock+Salt|Crimson+Text:400,600italic,400italic,700,700italic,600' rel='stylesheet' type='text/css'>
+
+		<link href = "fonts/css/fontello.css" rel="stylesheet">
 
 	</head>
 	<body>
 
-	<div id="header"></div>
+	<div id="header">
+		<ul id="nav">
+			<l><a href="index.html" class = "home">Ryan Eyles</a></l> 
 
-	Portfolio
+			<div id="links">
+				
 
-	<script src="js/shared.js"></script>
+			
+			<l class = "project"><a href="project.html" class="pages">Project</a>
+				<div id="dropDown">
+				<ul >
+					<li><a href="project.html">Design Proposal</a></li>
+					<li><a href="project.html#partB">Progess Demonstration</a></li>
+					<li><a href="project.html#partC">Final Delivery</a></li>
+				</ul>
+				</div>
+
+			</l>
+
+			<l id="selected"><a href="portfolio.html" class="pages">Portfolio</a></l>
+			<l><a href="reflection.html" class="pages">Reflection</a></l>
+			<l><a href="about.html" class="pages">About</a></l>
+
+			</div>
+		</ul>
+
+	</div>
+	
+	<br>
+
+	<div class="content">
+		<h1>Portfolio</h1>	
+		<h2>Brief</h2>
+		<p>Throughout the semester various projects and tasks and milestones were to be completed including the development of this portfolio. The portfolio was designed to culminate all assessment, various achievements and productions throughout the semester in DECO1800. 
+		</p>
+
+		<p>In addition to showcase individual contributions throughout this semester the portfolio is purposed to showcase Additionally this project was used to demonstrate creativity and skills in designing and implementing a web application.</p>
+
+		<h2>Inspiration</h2>
+		<a href="https://www.portfoliobox.net/examples"><img src="images/portfolio/inspo.png" width="500px" height="300px" style="float: right; margin-left: 25px"></a>
+		<p> I began this project by seeking inspiration and researching works from other designers and developers. <a href = "https://www.portfoliobox.net/examples"> Portfoliobox </a> along with many other websites list numerous examples. </p>
+
+		<p>This was an insight into the style which appealed to me and I therefore decided to sway towards a clean, crisp and simple design.</p>
+
+		<h2>Prototype</h2>
+		<p>To achieve a Clean crisp and simple design I decided to have individual pages for each required item, however link all milestones related to the main project on one page.</p>
+
+		<p>Each page was to have a header for navigation and plenty of white space to reduce clutter, display images better and make the text easier to read. </p>
+
+		<p>Furthermore I decided to have a home page, as an entry point to the portfolio. This page was designed to be clean and have minimal text allowing the following pages to be text heavy.</p>
+
+		<h2>Implementation</h2>
+			<div class = "slider" id = "portImgs">
+
+				<figure >
+					<img  class = "currImg" alt = "Portfolio Images" src = "images/portfolio/home.png"/>
+
+
+					<figcaption><span>
+						<i  onclick="slider.prev(port)" id="arrowLeft"class="arrow-icon icon-left-circle"></i>
+
+						<i onclick="slider.next(port)" id="arrowRight" class="arrow-icon icon-right-circle"></i>
+
+					</span>
+					<p id = "portSliderCap" class = "imgCaption">&nbsp Login Page</p></figcaption>
+				</figure>
+				<figure >
+					<img  class = "nxtImg" alt = "Portfolio Images" src = "images/portfolio/about.png"/>
+				</figure>
+				
+			</div>
+		<p>I started this project by implementing the core of functionality, so I started with the Home page and the linking pictures. From there I created navigation bars at the top of all the information pages.</p>
+
+		<p>From here the web page was navigable yet had no styling therefore I added background images to top of the information pages, and a background image to the homepage. </p>
+
+		<p>Fonts and colors were the next task; I found <a href= "https://www.google.com/fonts/">Google Web Fonts</a> and choose a few fonts for various aspects of the website. Furthermore <a href="https://color.adobe.com">Adobe Color</a> was extremely helpful when developing a colour theme to compliment the black and white theme.</p>
+
+		<p>Throughout the semester upon completion of a project I was then able to update the content on each page. It was until the end however did I format all the pictures and add finishing functionality and touches to produce a clean and seamless portfolio. </p>
+
+		<h2>Reflection</h2>
+		<p>Throughout the semester I completed work towards functionality therefore had little practice with css and no practice with styling. Throughout my degree I actually have not done many creative subjects so to stat with I had to do a lot of research to decide what I did and did not like so I could implement a creative design. I decided simple and clean was best for me and went with it. That for me was probably the hardest part of this project.</p>
+		
+		<p>Additionally because of this uncertainty I changed my design layout a few times.</p>
+
+		<p>There are various minor details of the final product which I would improve namely styling objects and user interaction. For instance I could implement the image sliders to automatically scroll and the figure caption displayed better. Finally some of the images affect the plain simple color scheme therefore these images should be edited more to match the rest of the web page.</p>
+		
+		<p>Overall however I believe the content supplied sufficiently describes my contribution throughout this course and as a container I am happy with it. It is my first graphic design work I have completed and I think it looks quite good, exactly what I was aiming towards.</p>
+
+	</div>
+
+
+	<!-- Back to top -->
+	<a href="#" id="toTop"><i class="arrow-icon icon-up-circled"></i><hr/>Back To Top</a>
+	<script src="js/shared.js" ></script>
+
 	</body>
 </html>

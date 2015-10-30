@@ -4,61 +4,119 @@ html, body{
 
 }
 
+
+
 #header {
-    background: url("images/keyboard.jpg");
+    background: url("images/syd.png");
     height: 25vw;
+    min-height: 95px;
+    
     width: 100%;
 }
 
 #nav {
+    max-height: 95px;
     width: 60%;
     position: absolute;
     top: 15px;
     left:20%;
+    margin: 0; 
+    padding: 0;
+    min-width: 800px;
 
 }
+#nav #links {
+    float: right;
+    padding-top: 37px;
+}
 
-#header ul {
+#nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
-#header li {
-    display: inline-block;
+#nav li {
+    display: block;
     float: left;
 }
 
-#header a:link, #header a:visited {
+#nav li a:link, a:visited {
     color: #FFFFFF;
     text-align: center;
 }
 
-
-#header a:hover, a:active {
-    /*background-color: #636363;*/
+#nav a:hover, a:active{
+   
     color: rgba(1,54,92,1);
+}
+ #selected a{
+   
+    color: red;
 }
 
 /*Fonts and Sizes */
-#header a.pages:link, #header a.pages:visited {
+#nav a.pages:link, #nav a.pages:visited {
     width: 120px;
     font-weight: bold;
+    font-family: 'Indie Flower', cursive;
     font-size: 22px;
     padding: 4px;
     text-decoration: none;
     text-transform: uppercase;
 }
 
-#header a.home:link, #header a.home:visited {
+#nav a.home:link, a.home:visited {
     width: 120px;
-    font-weight: bold;
-    font-size: 40px;
-    padding: 4px 200px 4px 4px;
+    font: 40px 'Rock Salt', cursive; 
+    font-weight: 600;
+    padding: 4px;
     text-decoration: none;
     text-transform: uppercase;
 }
+
+/*Project drop down*/
+#dropDown{
+    display: none;
+    height: auto;
+    margin-left: 10px;
+    
+    
+}
+
+#dropDown li {
+    /*display: block;*/
+    float: left;
+    clear: left;
+    font-family: 'Indie Flower', cursive;
+    font-size: 21px;
+    margin: 0 auto;
+
+}
+#dropDown li:first-child {
+    padding-top: 6px;
+}
+
+#dropDown li a  {
+        float: none;
+        text-decoration: none;
+        color: white;
+}
+
+
+.project:hover > #dropDown{
+
+    display: block;
+    position: absolute;
+}
+
+/*#dropDown a:hover, #dropDown {
+
+}*/
+
+
+
 
 
 
@@ -68,11 +126,298 @@ html, body{
 
 .content {
     height: auto;
-    width: 50%;
+    width: 45%;
     margin: 0 auto;
+    min-width: 800px;
 }
 
 .content h1 {
-    
+    font-family: 'Crimson Text', serif;
+    font-weight: 500;
+
+    font-size: 46px;
+    /*color: rgba(1,54,92,1);*/
 }
 
+.content p {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 300;
+    text-align: justify;
+}
+
+
+.content a {
+    color: red; 
+    text-decoration: none;
+}
+
+.content a:hover, .content a:active {
+    color: rgba(1,54,92,1);
+}
+
+
+
+/***************************************************************/
+/*-----------------------Image Slider--------------------------*/
+/***************************************************************/
+
+.slider .currImg {
+    display: block;
+    height: 100%;
+    width: 100%;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s linear;
+    border-radius: 17pt; 
+    box-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
+    z-index: 100;  
+}
+
+.slider .nxtImg {
+    display: block;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0.1;
+    border-radius: 17pt%
+    transition: visibility 2s 3s, opacity 1s linear;
+    z-index: 0;
+}
+
+.slider {
+    display: block;
+    height: 380px;
+    overflow: hidden;
+    position: relative;
+    float: right;
+    width: 420px;
+    margin: 0 0 0 25px;
+
+   
+}
+.slider figure{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding:0;
+}
+
+.slider figcaption {
+   position: absolute; 
+   top: 0; left: 0; bottom: 0; right: 0;
+
+    top: 37%;
+
+    z-index: 102;
+}
+
+.slider figcaption span {
+   /*color: white; */
+
+   font-size: 30px;
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   /*padding: 10px; */
+}
+
+.slider .imgCaption {
+    position: absolute;
+    bottom: 0;
+    padding:0;
+    margin: 0;
+    background-color: black;
+    opacity: 0.8;
+    color: red;
+    width: 100%;
+    height: 35pt;
+    /*font-weight: bold;*/
+    font-size: 20pt;
+    border-bottom-left-radius:  17pt;
+    border-bottom-right-radius:  17pt;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('./font/fontello.eot?93840122');
+  src: url('./font/fontello.eot?93840122#iefix') format('embedded-opentype'),
+       url('./font/fontello.woff?93840122') format('woff'),
+       url('./font/fontello.ttf?93840122') format('truetype'),
+       url('./font/fontello.svg?93840122#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+     
+.arrow-icon
+{
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  opacity: .8; 
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  /*line-height: 2em;*/
+ 
+ 
+  /* You can be more comfortable with increased icons size */
+   font-size: 150%; 
+ 
+ 
+   /*Uncomment for 3D effect */
+   text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); 
+}
+
+.slider i:hover, .slider i:active{
+    color: red;
+}
+
+.slider #arrowLeft {
+    float: left;
+}
+
+.slider #arrowRight {
+    float: right;
+    padding-right: 10px;
+}
+
+/***************************************************************/
+/*-----------------------Back To Top--------------------------*/
+/***************************************************************/
+
+.bottomMenu {
+  position: fixed;
+  right: 120pt;
+  z-index: 1;
+  transition: all 1s;
+}
+.hide {
+  opacity: 0;
+  bottom: -100%;
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+  bottom: 40pt;
+}
+
+#toTop {
+    margin: 0;
+    padding: 0;
+    font-size: 12pt;
+    color: rgba(1,54,92,1);
+    text-decoration: none;
+
+}
+
+#toTop i {
+    font-size: 50pt;
+}
+#toTop hr {
+    height:0px; visibility:hidden; margin-bottom:0px;
+}
+
+
+#toTop:hover {
+    color: #DD2611;
+}
+
+/***************************************************************/
+/*-----------------------Images--------------------------*/
+/***************************************************************/
+.right {
+    float: right;
+}
+
+#ideaIMG {
+    float: right;
+    height:260px;
+    width:240px;
+    margin: -30px 0 5px 25px;
+}
+
+#spriteIMG img, #progressIMG img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding:0;
+}
+
+#spriteIMG figcaption {
+    color: rgba(1,54,92,1);
+}
+
+#progressIMG img{
+    /*border-radius: 5%;*/
+    box-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
+}
+
+#nodeIMG {
+    position: relative;
+    width: 100%;
+    margin: 0;
+        
+}
+#nodeIMG p {
+    color: rgba(1,54,92,1);
+    margin: 0;
+    margin-left: -25px;
+    margin-top: 80px;
+    padding 0;
+    text-align: center;
+}
+
+
+#nodeIMG div {
+    float: right;
+    display: block;
+    border-radius: 100%;
+    width: 50pt;
+    height: 50pt;
+    padding: 10pt 5pt 10pt 25pt;
+    margin: 10pt 5pt 10pt 25pt;
+}
+
+#inf {
+    background-color: yellow;
+}
+
+#unlck {
+    background-color: black;
+}
+
+#lck {
+    background-color: red;
+}
+
+/*Project seporators*/
+.seperator img{
+    height: 20vw;
+    min-height: 95px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#aboutIMG {
+    position: relative;
+
+    float: right;
+    border-radius: 100%;
+    height: 300px;
+    width: 300px;
+    margin-left: 25px;
+}
